@@ -618,7 +618,7 @@ server setVariable [FactionGet(reb,"staticMortar"),2000,true];
 {server setVariable [_x select 0, _x select 1, true]} forEach (FactionGet(reb,"blackMarketStock"));
 
 server setVariable [FactionGet(reb,"lootCrate"), 25, true];
-server setVariable [FactionGet(reb,"rallyPoint"), 20, true];
+server setVariable [FactionGet(reb,"rallyPoint"), 10, true];
 
 ///////////////////////
 //     GARRISONS    ///
