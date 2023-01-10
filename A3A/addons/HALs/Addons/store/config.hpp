@@ -7214,6 +7214,28 @@ class cfgHALsStore
 			};
 		};
 
+		class rhs 
+		{
+			displayName = $STR_ARMS_DEALER_STORE;
+			categories[] = {
+			"handgunsRhs", 
+			"launchersRhs", 
+			"riflesRhs", 
+			"sniperRiflesRhs", 
+			"specialWeaponsRhs",
+			"mgRhs", 
+			"smgRhs", 
+			"launcherMagazinesRhs", 
+			"magazinesRhs", 
+			"opticsRhs", 
+			"muzzlesRhs", 
+			"underbarrelRhs", 
+			"pointersRhs", 
+			"navigationRhs", 
+			"miscRhs"
+			};
+		};
+
 		class 3cbf 
 		{
 			displayName = $STR_ARMS_DEALER_STORE;

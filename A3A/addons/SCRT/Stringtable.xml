@@ -906,7 +906,7 @@
             </Key>
             <Key ID="STR_marker_RP">
                 <Original>Rally Point (Remaining Travels: %1)</Original>
-                <Russian>Точка входа (Ост. кол-во перемещений: %1)</Russian>
+                <Russian>Точка сбора (Ост. кол-во перемещений: %1)</Russian>
             </Key>
             <Key ID="STR_support_supply_run_init">
                 <Original>Supply Run Entry Point</Original>
@@ -7087,6 +7087,10 @@
                 <Original>You can't Fast Travel with enemies near you.</Original>
                 <Russian>Вы не можете быстро путешествовать пока рядом с вами враги.</Russian>
             </Key>
+            <Key ID="STR_A3A_Dialogs_fast_travel_enemiesnear_group">
+                <Original>You cannot Fast Travel with enemies near the group.</Original>
+                <Russian>Вы не можете быстро путешествовать пока рядом с вашим отрядом враги.</Russian>
+            </Key>
             <Key ID="STR_A3A_Dialogs_fast_travel_no_multiple">
                 <Original>You can't Fast Travel if:&lt;br/&gt;you don't have a driver in all your vehicles or&lt;br/&gt;your vehicles are damaged and can't move or&lt;br/&gt;your group is in a boat.</Original>
                 <Russian>Вы не можете быстро путешествовать пока:&lt;br/&gt;во всех транспортных средствах вашего отряда нет водителей или&lt;br/&gt; ваша техника повреждена и обездвижена или&lt;br/&gt;ваш отряд находится в лодке или ином плавательном средстве.</Russian>
@@ -7544,6 +7548,10 @@
             <Key ID="STR_A3A_Logistics_tryLoad_alreadyhelped">
                 <Original>%1 is being helped or no longer needs your help.</Original>
                 <Russian>%1'у  уже кто-то помогает или ему больше не требуется помощь.</Russian>
+            </Key>
+            <Key ID="STR_A3A_Logistics_unableToLoad">
+                <Original>%1 is unable to load any cargo.</Original>
+                <Russian>%1 не может принять какой-либо груз.</Russian>
             </Key>
             <Key ID="STR_A3A_Logistics_tryLoad_not_enough_space">
                 <Original>%1 does not have enough space to load %2.</Original>

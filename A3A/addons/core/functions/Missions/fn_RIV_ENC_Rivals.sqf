@@ -118,7 +118,11 @@ private _anim = selectRandom [
 	"Acts_StaticDeath_09",
 	"Acts_StaticDeath_10"
 ];
-_intelLeader switchMove _anim;
+[_intelLeader, _anim] remoteExecCall ["switchMove", _intelLeader];
+private _timeOut = time + 2;
+waitUntil {_timeOut < time};
+
+_intelLeader setDamage 1;
 
 if (!isNil "_damagedBuilding") then {
 	private _emptyPos = [];
@@ -215,7 +219,7 @@ for "_i" from 0 to count _rivalsClasses - 1 do {
 		"Acts_StaticDeath_09",
 		"Acts_StaticDeath_10"
 	];
-	_soldier switchMove _anim;
+	[_soldier, _anim] remoteExecCall ["switchMove", _soldier];
 	sleep 0.5;
 	_soldier setDamage 1;
 	private _dir = [_soldier, _crashedVehicle] call BIS_fnc_dirTo;
@@ -232,6 +236,7 @@ sleep 2;
 _vehicles append [_laptop, _bloodSplat, _grassCutter];
 
 private _taskId = "RIV_ENC" + str A3A_taskCount;
+private _intelLeaderPosition = position _intelLeader;
 
 [
     [teamPlayer,civilian],
@@ -241,7 +246,7 @@ private _taskId = "RIV_ENC" + str A3A_taskCount;
         (localize "STR_rivals_quest_header"),
         _marker
     ],
-    (position _intelLeader),
+    _intelLeaderPosition,
     false,
     0,
     true,
@@ -287,7 +292,8 @@ _nul = [] spawn {
 
 	playSound3D ["x\A3A\addons\core\Sounds\Misc\BombCountdown.ogg", rivalsLaptop, false, getPosASL rivalsLaptop, 2.5, 1, 100]; 
 
-	sleep 2;
+	private _timeOut = time + 2;
+	waitUntil {_timeOut < time};
 
 	private _charge = "DemoCharge_Remote_Ammo_Scripted" createVehicle [0,0,0]; 
 	_charge setPosWorld (position rivalsLaptop); 
@@ -310,7 +316,7 @@ private _displayTime = [_dateLimit] call A3A_fnc_dateToTimeString;//Converts the
 
 sleep 2;
 
-[_markerPosition, true] spawn SCRT_fnc_rivals_encounter_rovingMortar;
+[[_markerPosition, true], "SCRT_fnc_rivals_encounter_rovingMortar"] call A3A_fnc_scheduler;
 
 
 [
@@ -402,12 +408,24 @@ _vehicles pushBack _rivalVeh;
 waitUntil  {
 	sleep 5;
 	private _aliveCount = {alive _x} count ((units _group1) + (units _group2));
-	private _isEveryoneDead = (call SCRT_fnc_misc_getRebelPlayers) findIf {alive _x && {_x distance2D _roadPosition < 1000}} == -1;
+	private _isEveryoneDead = (call SCRT_fnc_misc_getRebelPlayers) findIf {alive _x && {_x distance2D _intelLeaderPosition < 1000}} == -1;
 	Info_2("%1 Group Alive: %2", A3A_faction_riv get "name", str _aliveCount);
 	(dateToNumber date > _dateLimitNum) || {_aliveCount < 2 || {_isEveryoneDead}} 
 };
 
-if (dateToNumber date < _dateLimitNum && {(call SCRT_fnc_misc_getRebelPlayers) findIf {alive _x && {_x distance2D _roadPosition < 1000}} != -1}) then {
+switch (true) do {
+	case (dateToNumber date > _dateLimitNum): {
+		Info("Date limit exceeded");
+	};
+	case (_aliveCount < 2): {
+		Info("Rivals squad has less than 2 alive members.");
+	};
+	case (_isEveryoneDead): {
+		Info("Everyone is dead");
+	};
+};
+
+if (dateToNumber date < _dateLimitNum && {(call SCRT_fnc_misc_getRebelPlayers) findIf {alive _x && {_x distance2D _intelLeaderPosition < 1000}} != -1}) then {
 	[0,10,_markerPosition] remoteExec ["A3A_fnc_citySupportChange",2];
 	{ 
 		[10,_x] call A3A_fnc_addScorePlayer;

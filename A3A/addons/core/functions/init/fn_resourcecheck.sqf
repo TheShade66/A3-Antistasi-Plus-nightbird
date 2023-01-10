@@ -191,13 +191,15 @@ while {true} do {
 	sleep 3;
     _numWreckedAntennas = count antennasDead;
 	//Probability of spawning a mission in.
-    _shouldSpawnRepairThisTick = round(random 100) < 20;
+    _shouldSpawnRepairThisTick = round(random 100) < 15;
     if (_numWreckedAntennas > 0 && {_shouldSpawnRepairThisTick && {!("REP" in A3A_activeTasks)}}) then {
 		_potentials = [];
 		{
-			_markerX = [markersX, _x] call BIS_fnc_nearestPosition;
-			if (sidesX getVariable [_markerX,sideUnknown] == Occupants and {spawner getVariable _markerX == 2}) exitWith {
-				_potentials pushBack [_markerX,_x];
+			if (!isNil "_x" && {!isNull _x}) then {
+				_markerX = [markersX, _x] call BIS_fnc_nearestPosition;
+				if (sidesX getVariable [_markerX,sideUnknown] == Occupants and {spawner getVariable _markerX == 2}) exitWith {
+					_potentials pushBack [_markerX,_x];
+				};
 			};
 		} forEach antennasDead;
 		if (count _potentials > 0) then {

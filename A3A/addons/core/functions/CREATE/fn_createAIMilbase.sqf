@@ -314,6 +314,7 @@ if (!_busy) then {
 		{
 			_veh = createVehicle [selectRandom _arrayVehAAF, (_spawnParameter select 0), [], 0, "CAN_COLLIDE"];
 			_veh setDir (_spawnParameter select 1);
+			_veh setFuel 0;
 			_vehiclesX pushBack _veh;
 			[_veh, _sideX] call A3A_fnc_AIVEHinit;
 			_nVeh = _nVeh -1;

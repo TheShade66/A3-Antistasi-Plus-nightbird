@@ -63,6 +63,7 @@ switch (_cause) do {
 	case "SILENT";
 	case "LOADSTAT": {
 		[_milAdministration] call BIS_fnc_createRuin;
+		[_milAdministration, true] remoteExecCall ["hideObject", -clientOwner];
 	};
 	default {
 		Error("Unknown cause of administration removal.");

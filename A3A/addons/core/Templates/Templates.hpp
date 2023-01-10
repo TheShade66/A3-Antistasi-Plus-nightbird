@@ -29,6 +29,14 @@ class Templates
         description = $STR_A3AP_setupFactionsTab_ws_tura;
     };
 
+    class WS_Exegermenos : WS_Base
+    {
+        side = "Riv";
+        flagTexture = "a3\data_f\flags\flag_fia_co.paa"; //TODO: FIX!
+        name = "WS Exegerménos";
+        file = "WS_Riv_Exegermenos";
+    };
+
     // ************************************** Vanilla *******************************************************
 
     class Vanilla_Base : Base

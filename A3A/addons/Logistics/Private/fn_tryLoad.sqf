@@ -43,7 +43,7 @@ if (_return isEqualType 0) exitWith {
         case -4: { [localize "STR_A3A_Logistics_header", localize "STR_A3A_Logistics_tryLoad_nomountedstatic"] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] };
         case -5: { [localize "STR_A3A_Logistics_header", format [localize "STR_A3A_Logistics_tryLoad_incompat", _cargoName, _vehicleName]] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] }; //vehicle in weapon blacklist
         case -6: { [localize "STR_A3A_Logistics_header", format [localize "STR_A3A_Logistics_tryLoad_alreadyhelped",_cargoName]] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] };
-        case -7: { [localize "STR_A3A_Logistics_header", format [localize "STR_A3A_Logistics_tryLoad_alreadyhelped", _vehicleName]] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] };
+        case -7: { [localize "STR_A3A_Logistics_header", format [localize "STR_A3A_Logistics_unableToLoad", _vehicleName]] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] };
         case -8: { [localize "STR_A3A_Logistics_header", format [localize "STR_A3A_Logistics_tryLoad_not_enough_space", _vehicleName, _cargoName]] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] };
         case -9: { [localize "STR_A3A_Logistics_header", format [localize "STR_A3A_Logistics_tryLoad_blocking_plane_cargo", _vehicleName]] remoteExec ["A3A_fnc_customHint", remoteExecutedOwner] };
         default { Error_1("Unknown error code: %1", _return) };

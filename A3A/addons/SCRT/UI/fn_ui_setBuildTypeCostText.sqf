@@ -13,7 +13,7 @@ private _buildType = _comboBox lbData _index;
 
 switch (_buildType) do {
     case ("TRENCH"): {
-        _costTextBox ctrlSetText format ["%1: 250%2", _costLocalized, A3A_faction_civ get "currencySymbol"];
+        _costTextBox ctrlSetText format ["%1: 100%2", _costLocalized, A3A_faction_civ get "currencySymbol"];
     };
     case ("OBSTACLE"): {
         _costTextBox ctrlSetText format ["%1: 250%2", _costLocalized, A3A_faction_civ get "currencySymbol"];

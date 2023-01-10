@@ -15,7 +15,7 @@ _stock = _stock apply {_x select 0};
 
 {
 	private _vehiclePrice = [_x] call A3A_fnc_vehiclePrice;
-	_buyableVehiclesList pushBack [_x, _vehiclePrice, true];
+	_buyableVehiclesList pushBack [_x, _vehiclePrice, false];
 } forEach _stock;
 
 

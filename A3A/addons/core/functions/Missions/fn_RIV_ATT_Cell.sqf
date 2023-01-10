@@ -561,10 +561,10 @@ for "_i" from 0 to _carCount do {
 
     switch _event do {
         case 200: {
-            [_positionX] spawn SCRT_fnc_rivals_encounter_uavFlyby;
+            [[_positionX], "SCRT_fnc_rivals_encounter_uavFlyby"] call A3A_fnc_scheduler;
         };
         case 300: {
-            [_positionX] spawn SCRT_fnc_rivals_encounter_rovingMortar;
+            [[_positionX], "SCRT_fnc_rivals_encounter_rovingMortar"] call A3A_fnc_scheduler;
         };
     }
 };

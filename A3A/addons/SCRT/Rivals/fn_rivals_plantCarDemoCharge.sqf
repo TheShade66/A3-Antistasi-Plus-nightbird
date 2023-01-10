@@ -70,10 +70,14 @@ private _engineEhId = _vehicleToCharge addEventHandler
                     ] remoteExec ["BIS_fnc_showNotification", _x];
                 } forEach ((call SCRT_fnc_misc_getRebelPlayers) select {(position _x) distance _vehicleToCharge < 100});
 				
-				sleep 1;
+				private _timeOut = time + 1;
+	            waitUntil {_timeOut < time};
+
 				playSound3D ["x\A3A\addons\core\Sounds\Misc\BombCountdown.ogg", _charge, false, getPosASL _charge, 2.5, 1, 50]; 
-				sleep 2;
- 
+				
+                private _timeOut = time + 2;
+	            waitUntil {_timeOut < time};
+
 				private _chargePos = getPosWorld _charge; 
 				if (_charge != _vehicleToCharge) then { 
 					deleteVehicle _charge; 
@@ -114,9 +118,14 @@ private _engineEhId = _vehicleToCharge addEventHandler
         ] remoteExec ["BIS_fnc_showNotification", _x];
     } forEach ((call SCRT_fnc_misc_getRebelPlayers) select {(position _x) distance _vehicleToCharge < 100});
 
-    sleep 1;
+    private _timeOut = time + 1;
+	waitUntil {_timeOut < time};
+
+
     playSound3D ["x\A3A\addons\core\Sounds\Misc\BombCountdown.ogg", _charge, false, getPosASL _charge, 2.5, 1, 50]; 
-    sleep 2;
+    
+    private _timeOut = time + 1;
+	waitUntil {_timeOut < time};
 
     private _chargePos = getPosWorld _charge;
     deleteVehicle _charge;

@@ -25,10 +25,14 @@ if(_isTrap) exitWith
     {
         [petros,"hint",(localize "STR_intel_laptop_prepare_to_die_hint_description"), (localize "STR_intel_search_intel_header")] remoteExec ["A3A_fnc_commsMP",_x];
     } forEach ([50,0,_intel,teamPlayer] call A3A_fnc_distanceUnits);
-    sleep (2 + (random 3));
+
+    private _timeOut = time + 2 + (random 3);
+	waitUntil {_timeOut < time};
 
     playSound3D ["x\A3A\addons\core\Sounds\Misc\BombCountdown.ogg", _bomb, false, getPosASL _bomb, 2.5, 1, 50];
-    sleep 2;
+    
+    private _timeOut = time + 2;
+	waitUntil {_timeOut < time};
 
     private _bombPos = getPosWorld _bomb;
     deleteVehicle _bomb;

@@ -287,10 +287,10 @@ if (dateToNumber date < _dateLimitNum) then {
 
             switch _event do {
                 case 200: {
-                    [_hideoutPosition] spawn SCRT_fnc_rivals_encounter_uavFlyby;
+                    [[_hideoutPosition], "SCRT_fnc_rivals_encounter_uavFlyby"] call A3A_fnc_scheduler;
                 };
                 case 300: {
-                    [_hideoutPosition] spawn SCRT_fnc_rivals_encounter_rovingMortar;
+                    [[_hideoutPosition], "SCRT_fnc_rivals_encounter_rovingMortar"] call A3A_fnc_scheduler;
                 };
             };
         }; 
