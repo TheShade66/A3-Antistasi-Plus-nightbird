@@ -38,8 +38,7 @@ if ("move" in _flags) then {
         "Carry object",
         { [_this#3, true] call A3A_fnc_carryItem },
         _object, 1.5, true, true, "",
-        "([_this] call A3A_fnc_countAttachedObjects == 0)
-            and (isNull attachedTo _originalTarget)", 8
+        "(isNull attachedTo _originalTarget)", 8
     ];
 };
 

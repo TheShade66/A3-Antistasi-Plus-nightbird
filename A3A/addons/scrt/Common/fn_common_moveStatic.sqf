@@ -17,7 +17,7 @@ if (!(isNull attachedTo _thingX)) exitWith {
 if (vehicle _playerX != _playerX) exitWith {
 	[(localize "STR_antistasi_actions_move_assets_header_failure"), (localize "STR_antistasi_actions_move_assets_vehicle_failure")] call SCRT_fnc_misc_deniedHint;
 };
-if (([_playerX] call A3A_fnc_countAttachedObjects) > 0) exitWith {
+if (([_playerX] call A3A_fnc_countAttachedObjects) < 0) exitWith {
 	[(localize "STR_antistasi_actions_move_assets_header_failure"), (localize "STR_antistasi_actions_move_assets_attach_failure")] call SCRT_fnc_misc_deniedHint;
 };
 

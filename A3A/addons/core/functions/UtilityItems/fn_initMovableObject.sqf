@@ -30,8 +30,7 @@ _object addAction [
     true,
     "",
     "(
-        (([_this] call A3A_fnc_countAttachedObjects) isEqualTo 0)
-        and (attachedTo _target isEqualTo objNull)
+         (attachedTo _target isEqualTo objNull)
     )", 
     8
 ];
