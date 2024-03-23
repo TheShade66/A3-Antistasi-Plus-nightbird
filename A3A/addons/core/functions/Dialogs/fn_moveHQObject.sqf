@@ -15,7 +15,7 @@ if (!(isNull attachedTo _thingX)) exitWith {
 if (vehicle _playerX != _playerX) exitWith {
 	[localize "STR_A3A_Dialogs_moveHQObject_header", localize "STR_A3A_Dialogs_moveHQObject_error_veh"] call SCRT_fnc_misc_deniedHint;
 };
-if (([_playerX] call A3A_fnc_countAttachedObjects) > 0) exitWith {
+if (([_playerX] call A3A_fnc_countAttachedObjects) < 0) exitWith {
 	[localize "STR_A3A_Dialogs_moveHQObject_header", localize "STR_A3A_Dialogs_moveHQObject_error_already_attached"] call SCRT_fnc_misc_deniedHint;
 };
 
