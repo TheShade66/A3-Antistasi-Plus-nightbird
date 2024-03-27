@@ -9,19 +9,19 @@
 ["flagMarkerType", "Faction_CUP_NAPA"] call _fnc_saveToTemplate;
 
 ["vehiclesBasic", ["I_Quadbike_01_F"]] call _fnc_saveToTemplate;
-["vehiclesLightUnarmed", ["CUP_I_Hilux_armored_unarmed_NAPA"]] call _fnc_saveToTemplate;
-["vehiclesLightArmed", ["CUP_I_Hilux_DSHKM_NAPA", "CUP_I_Datsun_PK"]] call _fnc_saveToTemplate;
-["vehiclesTruck", ["CUP_V3S_Open_NAPA"]] call _fnc_saveToTemplate;
+["vehiclesLightUnarmed", ["CUP_B_LR_Transport_CZ_W"]] call _fnc_saveToTemplate;
+["vehiclesLightArmed", ["CUP_I_Hilux_DSHKM_NAPA", "CUP_I_Datsun_PK","CUP_B_LR_MG_CZ_W"]] call _fnc_saveToTemplate;
+["vehiclesTruck", ["CUP_B_T810_Unarmed_CZ_WDL"]] call _fnc_saveToTemplate;
 ["vehiclesAT", ["CUP_I_Hilux_SPG9_NAPA"]] call _fnc_saveToTemplate;
 ["vehiclesAA", ["CUP_I_Ural_ZU23_NAPA", "CUP_I_Hilux_zu23_NAPA"]] call _fnc_saveToTemplate;
 ["vehiclesBoat", ["I_G_Boat_Transport_01_F"]] call _fnc_saveToTemplate;
 
 ["vehiclesPlane", ["CUP_C_DC3_CIV"]] call _fnc_saveToTemplate;       // replace from civ varient s
 ["vehiclesCivPlane", ["CUP_C_AN2_CIV", "CUP_C_C47_CIV"]] call _fnc_saveToTemplate;
-["vehiclesMedical", ["CUP_I_LR_Ambulance_RACS"]] call _fnc_saveToTemplate;
+["vehiclesMedical", ["CUP_B_LR_Ambulance_CZ_W"]] call _fnc_saveToTemplate;
 
 
-["vehiclesCivCar", ["CUP_O_Hilux_unarmed_CR_CIV"]] call _fnc_saveToTemplate;
+["vehiclesCivCar", ["CUP_C_LR_Transport_CTK"]] call _fnc_saveToTemplate;
 ["vehiclesCivTruck", ["CUP_C_Ural_Civ_03"]] call _fnc_saveToTemplate;
 ["vehiclesCivHeli", ["CUP_C_412", "CUP_C_SA330_Puma_HC1_ChernAvia", "CUP_I_Merlin_HC3_PMC_Lux_3C"]] call _fnc_saveToTemplate;
 ["vehiclesCivBoat", ["C_Rubberboat"]] call _fnc_saveToTemplate;
@@ -73,9 +73,9 @@
 ///////////////////////////
 
 private _initialRebelEquipment = [
-    "CUP_sgun_slamfire", "CUP_srifle_LeeEnfield", "CUP_srifle_LeeEnfield_rail",
+    "CUP_sgun_slamfire", "CUP_srifle_LeeEnfield", "CUP_srifle_LeeEnfield_rail","CUP_srifle_Mosin_Nagant",
     "CUP_1Rnd_12Gauge_Pellets_No00_Buck", "CUP_1Rnd_12Gauge_Pellets_No3_Buck", "CUP_10x_303_M",
-    "CUP_hgun_TaurusTracker455", "CUP_6Rnd_45ACP_M",
+    "CUP_hgun_TaurusTracker455", "CUP_6Rnd_45ACP_M","CUP_5Rnd_762x54_Mosin_M",
     ["CUP_launch_RPG18", 50],
     ["IEDUrbanSmall_Remote_Mag", 10], ["IEDLandSmall_Remote_Mag", 10], ["IEDUrbanBig_Remote_Mag", 3], ["IEDLandBig_Remote_Mag", 3],
     "CUP_HandGrenade_RGD5", "SmokeShell",

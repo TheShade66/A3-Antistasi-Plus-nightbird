@@ -61,7 +61,7 @@
 ["vehiclesMilitiaCars", ["CUP_B_nM1025_Unarmed_USMC_WDL"]] call _fnc_saveToTemplate;
 ["vehiclesMilitiaAPCs", ["CUP_B_M113A3_USA", "CUP_B_M113A3_USA"]] call _fnc_saveToTemplate;
 
-["vehiclesPolice", ["B_GEN_Offroad_01_gen_F"]] call _fnc_saveToTemplate;
+["vehiclesPolice", ["B_GEN_Offroad_01_gen_F","B_GEN_Offroad_01_covered_F","a3a_Offroad_01_GEN_armed_F"]] call _fnc_saveToTemplate;
 
 ["staticMGs", ["CUP_B_M2StaticMG_US"]] call _fnc_saveToTemplate;
 ["staticAT", ["CUP_B_TOW2_TriPod_US"]] call _fnc_saveToTemplate;
@@ -430,16 +430,20 @@ _militaryLoadoutData set ["sniperRifles", [
 
 private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 
-_policeLoadoutData set ["uniforms", ["U_B_GEN_Soldier_F", "U_B_GEN_Commander_F"]];
+_policeLoadoutData set ["uniforms", ["CUP_U_B_BDUv2_roll2_dirty_Urban", "CUP_U_B_BDUv2_roll2_gloves_Urban"]];
 _policeLoadoutData set ["vests", ["V_TacVest_blk_POLICE"]];
-_policeLoadoutData set ["helmets", ["H_Cap_police"]];
+_policeLoadoutData set ["helmets", ["H_Cap_police","CUP_H_CDF_Beret_UN"]];
 
 _policeLoadoutData set ["shotGuns", [
 ["CUP_sgun_M1014", "", "", "",["CUP_8Rnd_12Gauge_Slug"],[],""]
 ]];
 _policeLoadoutData set ["SMGs", [
 ["CUP_smg_MP5A5", "", "", "CUP_optic_CompM2_low",["CUP_30Rnd_Red_Tracer_9x19_MP5"],[],""],
+["CUP_smg_UZI", "", "", "CUP_optic_MicroT1_low", ["CUP_32Rnd_9x19_UZI_M"], [], ""],
 ["CUP_smg_MP5A5", "", "", "CUP_optic_HoloBlack",["CUP_30Rnd_Red_Tracer_9x19_MP5"],[],""]
+]];
+_policeLoadoutData set ["sidearms", [
+    ["CUP_hgun_Glock17_blk", "", "", "optic_MRD_black", ["CUP_7RnCUP_17Rnd_9x19_glock17"], [], ""]
 ]];
 
 ////////////////////////////////

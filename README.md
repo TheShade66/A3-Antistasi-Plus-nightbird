@@ -4,7 +4,7 @@
   <p>
     <i>An Arma 3 persistent multiplayer scenario about guerilla warfare tactics.</i>
     <br/>
-    <i>Fork of Antistasi Plus Version focused on expanding templates, maps and features.</i>
+    <i>Fork of Antistasi Plus Version focused on expanding templates, maps and features. Small edits by TheNightbBird</i>
   </p>
   <!-- <p>
     <a href="https://github.com/igorkis-scrts/A3-Antistasi-Plus/releases/latest">
@@ -13,7 +13,7 @@
   </p> -->
 </div>
 
-## Latest Stable Release
+## Latest Stable Release of original fork
 **[Steam Workshop: Antistasi Ultimate](https://steamcommunity.com/sharedfiles/filedetails/?id=3020755032)**
 
 ### _Interested in Extender modding?_
@@ -31,6 +31,7 @@
 - Discord Rich Presence by ConnorAU
 - Antistasi Plus (fork of Community) by Socrates
 - Antistasi Ultimate (fork of Plus) by the [Antistasi Ultimate Dev Team](https://github.com/SilenceIsFatto/A3-Antistasi-Ultimate/wiki/Developers)
+- Small edits by TheNightBird
 
 ## Additional Icons Credits
 <div>
