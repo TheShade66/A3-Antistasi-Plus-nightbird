@@ -79,6 +79,15 @@
         maps[] = {"chernarus_summer","chernarus"};
     };
 
+        class CUP_EF_Temperate : CUP_Base
+    {
+        side = "Occ";
+        flagTexture = "\A3\Data_F\Flags\flag_uk_co.paa";
+        name = "CUP European Front Temperate";
+        file = "CUP_AI_EF_Temperate";
+        climate[] = {"temperate"};
+    };
+
     class CUP_RACS_Arid : CUP_Base
     {
         side = "Occ";
@@ -198,6 +207,14 @@
         flagTexture = "cup\baseconfigs\cup_baseconfigs\data\flags\flag_napa_co.paa";
         name = "CUP NAPA";
         file = "CUP_Reb_NAPA";
+        description = $STR_A3AP_setupFactionsTab_napa_3cbf;
+    };
+    class CUP_CZG : CUP_Base
+    {
+        side = "Reb";
+        flagTexture = "cup\baseconfigs\cup_baseconfigs\data\flags\flag_cz_co.paa";
+        name = "CUP Czech Guerillas";
+        file = "CUP_Reb_CZ";
         description = $STR_A3AP_setupFactionsTab_napa_3cbf;
     };
     class CUP_TKC : CUP_Base
