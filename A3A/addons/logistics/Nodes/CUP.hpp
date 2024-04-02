@@ -95,6 +95,38 @@ class CUP_WheeledVehicles_CUP_WheeledVehicles_Ural_cup_Ural_open2_p3d : TRIPLES(
     };
 };
 
+class CUP_WheeledVehicles_CUP_WheeledVehicles_Ural_cup_Ural_open_p3d : TRIPLES(ADDON,Nodes,Base)
+{
+    class Nodes
+    {
+        class Node1
+        {
+            offset[] = {0,0.3,-0.495};
+            seats[] = {2,3};
+        };
+        class Node2
+        {
+            offset[] = {0,-0.5,-0.495};
+            seats[] = {4,5};
+        };
+        class Node3
+        {
+            offset[] = {0,-1.3,-0.495};
+            seats[] = {6,7};
+        };
+        class Node4
+        {
+            offset[] = {0,-2.1,-0.495};
+            seats[] = {8,9};
+        };
+        class Node5
+        {
+            offset[] = {0,-2.9,-0.495};
+            seats[] = {10,11,12,13};
+        };
+    };
+};
+
 class CUP_WheeledVehicles_CUP_WheeledVehicles_Ural_cup_Ural_p3d : TRIPLES(ADDON,Nodes,Base)
 {
     canLoadWeapon = 0;

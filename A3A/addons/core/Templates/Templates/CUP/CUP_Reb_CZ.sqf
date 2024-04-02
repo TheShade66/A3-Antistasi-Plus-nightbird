@@ -101,8 +101,6 @@ _initialRebelEquipment append ["Chemlight_blue","Chemlight_green","Chemlight_red
 ["initialRebelEquipment", _initialRebelEquipment] call _fnc_saveToTemplate;
 
 private _rebUniforms = [
-    "CUP_I_B_PARA_Unit_2",
-    "CUP_I_B_PARA_Unit_6",
     "CUP_I_B_PARA_Unit_9",
     "CUP_U_I_GUE_Anorak_01",
     "CUP_U_I_GUE_Anorak_03",

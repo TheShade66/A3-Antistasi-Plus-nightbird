@@ -27,6 +27,23 @@ class A3_soft_f_Offroad_01_Offroad_01_unarmed_F : TRIPLES(ADDON,Nodes,Base)
     };
 };
 
+class A3_soft_f_enoch_Offroad_01_Offroad_01_covered_F : TRIPLES(ADDON,Nodes,Base)
+{
+    class Nodes
+    {
+        class Node1
+        {
+            offset[] = {-0.05,-1.3,-0.683};
+            seats[] = {3,4};
+        };
+        class Node2
+        {
+            offset[] = {-0.05,-2.3,-0.683};
+            seats[] = {1,2};
+        };
+    };
+};
+
 class A3_soft_f_gamma_van_01_Van_01_transport_F_p3d : TRIPLES(ADDON,Nodes,Base)
 {
     class Nodes

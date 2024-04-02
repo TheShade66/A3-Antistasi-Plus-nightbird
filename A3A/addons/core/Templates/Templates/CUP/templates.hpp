@@ -239,3 +239,10 @@
         file = "CUP_Riv_CHDKZ";
         description = $STR_A3AP_setupFactionsTab_chdkz;
     };
+    class CUP_ION_merc : CUP_Base
+    {
+        side = "Riv";
+        flagTexture = "cup\baseconfigs\cup_baseconfigs\data\flags\flag_ion_black_co.paa";
+        name = "CUP ION Mercs";
+        file = "CUP_Riv_ION";
+    };
